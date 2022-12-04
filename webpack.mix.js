@@ -15,3 +15,11 @@ mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         //
     ]);
+
+const { dependencies } = require('../package.json')
+
+let whiteListedModules = ['vue']
+
+externals: [
+  ...Object.keys(dependencies || {}).filter(d => !whiteListedModules.includes(d))
+]

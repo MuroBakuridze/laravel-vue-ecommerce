@@ -1,9 +1,3 @@
-// import { createApp } from 'vue'
-// import store from './store'
-// import router from './router'
-// import './index.css'
-// import './style.css'
-
 import {createApp} from 'vue'
 import store from './store'
 import router from './router'

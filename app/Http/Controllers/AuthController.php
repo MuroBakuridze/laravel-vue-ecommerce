@@ -26,7 +26,7 @@ class AuthController extends Controller
 
         /** @var \App\Models\User $user */
         $user = Auth::user();
-        if(!user->is_admin) {
+        if(!$user->is_admin) {
             Auth::logout();
 
             return response([
